@@ -12,12 +12,15 @@ import {
 } from '@nestjs/common';
 import { ProductsService } from '../services/products.service';
 import { CreateProductDto, UpdateProductDto } from '../dto/product.dto';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Products')
 @Controller('products')
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
   @Get('/')
+  @ApiOperation({ summary: 'List of Products' })
   @HttpCode(HttpStatus.OK)
   getAll() {
     return this.productsService.getAll();

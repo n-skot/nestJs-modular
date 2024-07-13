@@ -10,7 +10,9 @@ import {
 import { UsersService } from '../services/users.service';
 import { OrderEntity } from 'src/orders/entities/order.entity';
 import { ProductsService } from 'src/products/services/products.service';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Users')
 @Controller('users')
 export class UsersController {
   constructor(

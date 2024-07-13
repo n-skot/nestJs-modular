@@ -24,8 +24,8 @@ const API_TASK = 'https://jsonplaceholder.typicode.com/todos';
         API_KEY: joi.number().required(),
         DATABASE_NAME: joi.string().required(), //
         PORT: joi.number().required(),
-      })
-    }), 
+      }),
+    }),
     HttpModule,
     UsersModule,
     OrdersModule,
